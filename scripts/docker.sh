@@ -41,3 +41,22 @@ curl -L "https://github.com/docker/compose/releases/download/$COMPOSEVERSION/doc
 chmod +x /usr/local/bin/docker-compose
 ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 echo -e "\e[33m**********\e[39mEnd installing the latest stable Docker Compose release\e[33m**********\e[39m"
+
+# configure the motd.
+# NB this was generated at http://patorjk.com/software/taag/#p=display&f=Star%20Wars&t=docker%0Aserver
+cat > /etc/motd <<'EOF'
+ _______   ______     ______  __  ___  _______ .______
+|       \ /  __  \   /      ||  |/  / |   ____||   _  \
+|  .--.  |  |  |  | |  ,----'|  '  /  |  |__   |  |_)  |
+|  |  |  |  |  |  | |  |     |    <   |   __|  |      /
+|  '--'  |  `--'  | |  `----.|  .  \  |  |____ |  |\  \----.
+|_______/ \______/   \______||__|\__\ |_______|| _| `._____|
+
+    _______. _______ .______     ____    ____  _______ .______
+   /       ||   ____||   _  \    \   \  /   / |   ____||   _  \
+  |   (----`|  |__   |  |_)  |    \   \/   /  |  |__   |  |_)  |
+   \   \    |   __|  |      /      \      /   |   __|  |      /
+.----)   |   |  |____ |  |\  \----.  \    /    |  |____ |  |\  \----.
+|_______/    |_______|| _| `._____|   \__/     |_______|| _| `._____|
+
+EOF
