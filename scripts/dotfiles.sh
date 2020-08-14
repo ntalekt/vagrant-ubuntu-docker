@@ -1,6 +1,8 @@
 #!/bin/bash
 
+#
 # Install my dotfiles for vagrant user
+#
 echo -e "\e[33m**********\e[39mBegin .dotfiles\e[33m**********\e[39m"
 git clone https://github.com/ntalekt/dotfiles.git /home/vagrant/.dotfiles
 
