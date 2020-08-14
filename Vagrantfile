@@ -22,7 +22,9 @@ Vagrant.configure("2") do |config|
     #esxi.guest_boot_disk_size = 30
   end
 
+  #
   # Rsync the current directory and mount to /vagrant on the VM
+  #
   config.vm.synced_folder('.', '/vagrant', type: 'rsync')
 
   args = []
@@ -43,6 +45,11 @@ Vagrant.configure("2") do |config|
   args = []
   config.vm.provision "vmware tools", type: "shell",
       path: "scripts/vmware_tools.sh",
+      args: args
+
+  args = []
+  config.vm.provision "netplan", type: "shell",
+      path: "scripts/netplan.sh",
       args: args
 
   args = []

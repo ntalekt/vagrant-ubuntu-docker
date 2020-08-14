@@ -1,4 +1,5 @@
 .vagrant
 bin/
+config/
 *.log
 id_*
