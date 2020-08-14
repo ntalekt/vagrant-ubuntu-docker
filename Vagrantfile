@@ -52,6 +52,11 @@ Vagrant.configure("2") do |config|
       path: "scripts/netplan.sh",
       args: args
 
+  args = [Secret.mount_one,Secret.mount_two,Secret.server,Secret.remote_one,Secret.remote_two]
+  config.vm.provision "fstab", type: "shell",
+      path: "scripts/fstab.sh",
+      args: args
+
   args = []
   config.vm.provision "reboot", type: "shell",
       path: "scripts/reboot.sh",
