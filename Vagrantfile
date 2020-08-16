@@ -57,6 +57,11 @@ Vagrant.configure("2") do |config|
       path: "scripts/fstab.sh",
       args: args
 
+  args = [Secret.ups_server,Secret.ups_user,Secret.ups_pass]
+  config.vm.provision "ups client", type: "shell",
+      path: "scripts/ups_client.sh",
+      args: args
+
   args = []
   config.vm.provision "reboot", type: "shell",
       path: "scripts/reboot.sh",
