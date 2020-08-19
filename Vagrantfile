@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
     esxi.esxi_hostname = Secret.esxi_hostname
     esxi.esxi_username = Secret.esxi_username
     esxi.esxi_password = Secret.esxi_password
-    esxi.esxi_virtual_network = ['VM Management']
+    esxi.esxi_virtual_network = ['VM Network']
     esxi.guest_mac_address = ['00:50:56:00:00:02']
     esxi.esxi_disk_store = 'datastore1'
     esxi.guest_name = NAME
