@@ -34,6 +34,7 @@ tee /etc/docker/daemon.json > /dev/null << EOF
 {
   "exec-opts": ["native.cgroupdriver=systemd"],
   "insecure-registries" : ["$IP:443","$IP:80","0.0.0.0/0"],
+  "dns": ["${1}", "${2}"],
   "log-driver": "json-file",
   "log-opts": {
     "max-size": "100m"

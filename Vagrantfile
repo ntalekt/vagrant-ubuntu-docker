@@ -37,7 +37,7 @@ Vagrant.configure("2") do |config|
       path: "scripts/dotfiles.sh",
       args: args
 
-  args = []
+  args = [Secret.dns1,Secret.dns2]
   config.vm.provision "docker install", type: "shell",
       path: "scripts/docker.sh",
       args: args
