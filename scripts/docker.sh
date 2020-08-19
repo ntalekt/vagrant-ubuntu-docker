@@ -93,3 +93,10 @@ mv -f /vagrant/config/environment /etc/environment
 chown root:root /etc/environment
 chmod 0644 /etc/environment
 echo -e "\e[33m**********\e[39mEnd move environments file\e[33m**********\e[39m"
+
+#
+# create traefik proxy network
+#
+echo -e "\e[33m**********\e[39mBegin create traefik proxy net\e[33m**********\e[39m"
+docker network create t2_proxy
+echo -e "\e[33m**********\e[39mEnd create traefik proxy net\e[33m**********\e[39m"
