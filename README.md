@@ -10,6 +10,8 @@ A simple Vagrantfile to setup Ubuntu 18.04 server with Docker on ESXi.
 * My public dotfiles
 * VMware Tools
 * Netplan config
+* Sets up environments file
+* Creates Docker traefik proxy network
 * fstab mounts
 
 ## Usage
