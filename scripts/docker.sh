@@ -84,3 +84,12 @@ cat > /etc/motd <<'EOF'
 |_______/    |_______|| _| `._____|   \__/     |_______|| _| `._____|
 
 EOF
+
+#
+# move environments file
+#
+echo -e "\e[33m**********\e[39mBegin move environments file\e[33m**********\e[39m"
+mv -f /vagrant/config/environment /etc/environment
+chown root:root /etc/environment
+chmod 0644 /etc/environment
+echo -e "\e[33m**********\e[39mEnd move environments file\e[33m**********\e[39m"
